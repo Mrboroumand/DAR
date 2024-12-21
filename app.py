@@ -8,8 +8,10 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return "DAR is runing"
+    return f"DAR is runing \n links:\n {extract_links()}"
 
+def extract_links ():
+        return open("data.txt", "r", encoding= "UTF-8").read()
 
 
 def start_browser():
