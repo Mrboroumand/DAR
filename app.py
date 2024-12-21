@@ -32,7 +32,7 @@ def main(page, browser, playwright):
                 data = open("data.txt", "r", encoding="UTF-8")
                 ads_from_past = data.readlines()
                 for i in range(ad.count()-2):
-                        ad_link = f"https://divar.ir{ad.locator("a").nth(i).get_attribute("href")}\n"
+                        ad_link = f'https://divar.ir{ad.locator("a").nth(i).get_attribute("href")}\n'
                         if ad_link not in ads_from_past:
                                 open("data.txt", "a", encoding="UTF-8").write(ad_link)
                                 new_ads.append(ad_link)
