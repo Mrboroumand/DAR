@@ -50,10 +50,10 @@ def main(page, browser, playwright):
 
 
 if __name__=='__main__':
+    send_message("hello", "u0M9dx041320c11ccae5f04e420d7b8f")
     app.run(host="0.0.0.0",port=443)
     page, browser, pw = start_browser()
     main(page, browser, pw)
-    send_message("hello", "u0M9dx041320c11ccae5f04e420d7b8f")
     while True:
             page, browser, pw = start_browser()
             result = main(page, browser, pw)
